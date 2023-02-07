@@ -35,6 +35,13 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Please give us access to your camera, to complete the verification.</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>$(PRODUCT_NAME) Authentication with TouchId or FaceID</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Please give us access to your photo library for profile picture or verification</string>
+
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>UILaunchStoryboardName</key>
