@@ -1,5 +1,6 @@
 import {
   useCreateWallet,
+  useDeleteWallet,
   useLoadWallet,
   useMutation,
   useWallet,
@@ -7,7 +8,7 @@ import {
 import {Alert, Text, TouchableOpacity, ViewStyle} from 'react-native';
 import {celoNetworkDerivationPath} from '@node-fi/chain-config';
 import styles from './styles';
-import React from 'react';
+import React, {useCallback} from 'react';
 import {shortenAddress} from '../../utils/shortenAddress';
 
 export function WalletButton({style}: {style?: ViewStyle}) {
@@ -15,6 +16,7 @@ export function WalletButton({style}: {style?: ViewStyle}) {
 
   const createWallet = useCreateWallet();
   const loadWallet = useLoadWallet();
+  const deleteWallet = useDeleteWallet();
 
   const onConnect = useMutation(
     async () => {
@@ -44,6 +46,28 @@ export function WalletButton({style}: {style?: ViewStyle}) {
     },
   );
 
+  const handleLongPress = useCallback(() => {
+    if (wallet.signer && wallet.address) {
+      Alert.alert(
+        'Delete Wallet',
+        'Are you sure you want to delete your wallet?',
+        [
+          {
+            text: 'Cancel',
+            style: 'cancel',
+          },
+          {
+            text: 'Delete',
+            onPress: () =>
+              deleteWallet({
+                address: wallet.address!,
+              }),
+          },
+        ],
+      );
+    }
+  }, [wallet, deleteWallet]);
+
   return (
     <TouchableOpacity
       style={[
@@ -51,7 +75,8 @@ export function WalletButton({style}: {style?: ViewStyle}) {
         wallet.signer ? styles.connected : styles.disconnected,
         style,
       ]}
-      onPress={onConnect.mutate as () => void}>
+      onPress={onConnect.mutate as () => void}
+      onLongPress={handleLongPress}>
       <Text style={styles.text}>
         {wallet?.signer
           ? shortenAddress(wallet.address)

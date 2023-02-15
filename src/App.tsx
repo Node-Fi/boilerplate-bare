@@ -20,7 +20,6 @@ import {
 import {
   Colors,
   DebugInstructions,
-  Header,
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
@@ -63,10 +62,7 @@ function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
-    <NodeKitProvider
-      deferWalletLoad
-      apiKey={process.env.NODE_API_KEY ?? 'need-api-key!'}
-      chainId={+ChainId.Celo}>
+    <NodeKitProvider apiKey={process.env.NODE_API_KEY} chainId={+ChainId.Celo}>
       <SafeAreaView>
         <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
 

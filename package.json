@@ -19,7 +19,7 @@
     "@formatjs/intl-pluralrules": "^5.1.8",
     "@node-fi/chain-config": "^0.0.2",
     "@node-fi/react-native-aes": "^0.0.1-alpha.2",
-    "@node-fi/react-native-sdk": "^1.0.0-alpha.1",
+    "@node-fi/react-native-sdk": "^1.0.0-alpha.2",
     "@react-native-async-storage/async-storage": "^1.17.11",
     "@tradle/react-native-http": "^2.0.1",
     "add": "^2.0.6",

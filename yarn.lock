@@ -1878,17 +1878,17 @@
     react-native-securerandom "1.0.0"
     unorm "^1.3.3"
 
-"@node-fi/react-native-sdk@^1.0.0-alpha.1":
-  version "1.0.0-alpha.1"
-  resolved "https://registry.npmjs.org/@node-fi/react-native-sdk/-/react-native-sdk-1.0.0-alpha.1.tgz"
-  integrity sha512-SXYqIskfvCOBpobmpS7uitbHSIS7fmAvODxpHkgxFTHQLR9l4k/uMsAZi6uNtAv+RkYNuh8UJhxd/TGUB8H86A==
+"@node-fi/react-native-sdk@^1.0.0-alpha.2":
+  version "1.0.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/@node-fi/react-native-sdk/-/react-native-sdk-1.0.0-alpha.2.tgz#7e71b2c7555f282022680b52fae09010e3c06050"
+  integrity sha512-6QHc2A5XVoUd7l74wHw8RZSekDbDzh6MEkL1ieHSFV4Whf3bjRjoy2TnNL1IkLRgntaRyOnXTPBF4z7n+mv7Mw==
   dependencies:
     "@ethersproject/abi" "^5.5.0"
     "@ethersproject/abstract-provider" "^5.7.0"
     "@ethersproject/address" "^5.7.0"
     "@ethersproject/providers" "^5.7.2"
     "@ethersproject/units" "^5.7.0"
-    "@node-fi/chain-config" "^0.0.1-alpha.2"
+    "@node-fi/chain-config" "^0.0.2"
     "@node-fi/multicall" "^0.9.0-alpha.2"
     "@node-fi/react-native-aes" "^0.0.1-alpha.2"
     "@node-fi/react-native-bip39" "2.2.5"
@@ -7445,17 +7445,9 @@ react-native-device-info@^8.7.1:
   resolved "https://registry.npmjs.org/react-native-device-info/-/react-native-device-info-8.7.1.tgz"
   integrity sha512-cVMZztFa2Qn6qpQa601W61CtUwZQ1KXfqCOeltejAWEXmgIWivC692WGSdtGudj4upSi1UgMSaGcvKjfcpdGjg==
 
-react-native-fast-crypto@^2.0.0:
+react-native-fast-crypto@^2.0.0, react-native-fast-crypto@^2.2.0:
   version "2.2.0"
   resolved "https://registry.npmjs.org/react-native-fast-crypto/-/react-native-fast-crypto-2.2.0.tgz"
-  integrity sha512-JXQmnXGH3HpJYZrBsR7sL6cO/W3k1pHqTYbwnwTsJ8VUYXIsIEf1T0nMk6Z+XkQNI8RIQOeWJ9AuZLai4onHZg==
-  dependencies:
-    buffer "^5.0.8"
-    rfc4648 "^1.0.0"
-
-react-native-fast-crypto@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/react-native-fast-crypto/-/react-native-fast-crypto-2.2.0.tgz#062014a563ef34af30e1969ae4ae4b5cd6ab9e44"
   integrity sha512-JXQmnXGH3HpJYZrBsR7sL6cO/W3k1pHqTYbwnwTsJ8VUYXIsIEf1T0nMk6Z+XkQNI8RIQOeWJ9AuZLai4onHZg==
   dependencies:
     buffer "^5.0.8"
